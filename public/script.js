@@ -52,10 +52,16 @@ const addVideoStream = (video, stream) => {
 }
 
 let text = $("input");
+
   $('html').keydown((e) =>{
     if (e.which == 13 && text.val().length !== 0) {
       console.log(text.val())
       socket.emit('message', text.val());
       text.val('')
     }
+  });
+
+  socket.on('createMessage', message => {
+    console.log('this is coming  from server', message)
   })
+
