@@ -100,3 +100,7 @@ video {
   color: #F5F5F5;
 }
 
+.messages {
+  color: white;
+  list-style: none;
+}
